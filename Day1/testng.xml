@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="example suite 1" verbose="1" >
+    <test name="Regression suite 1" preserve-order="false">
+
+        <groups>
+
+            <define name="functional_test">
+                 <include name="smoke"/>
+                 <include name="reg"/>
+            </define>
+
+            <define name="functional_test1">
+                <include name="smoke"/>
+                <exclude name="reg"/>
+            </define>
+
+            <run>
+                <include name="functional_test1"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="groups.GroupTest1"/>
+            <class name="groups.GroupTest2"/>
+            <class name="groups.GroupTest3"/>
+        </classes>
+    </test>
+</suite>
